@@ -3,7 +3,8 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game=Game.create()
+    @game = Game.create()
+
     round1 = Round.create(game_round: 1, game: @game, judge: Player.find_by_id(1))
     round1.get_random_prompt
 

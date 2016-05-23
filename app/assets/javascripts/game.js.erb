@@ -11,7 +11,11 @@ $(document).ready(function(){
   });
 
   $('.gif-button').click(function() {
-    console.log($(this).find("#selection_gif_id").val());
+    var id = $(this).find("#selection_gif_id").val();
+
+    App.game.send_gif(id)
+
+
   })
 
 
